@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>About</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <p>This site is a personal project showcasing the beautiful birds observed from my home. I hope you enjoy it!</p>
+    </main>
+    <footer>
+        <p>© 2024 My Birdwatching Collection</p>
+    </footer>
+</body>
+</html>
