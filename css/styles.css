@@ -31,6 +31,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
 	text-align:center;
+	flex-direction:column;
 }
 
 .gallery article {
@@ -57,7 +58,9 @@ img {
 .container {
       display: flex;
       justify-content: space-around;
-      gap: 40px; /* Adds space between the two columns */
+      gap: 20px; /* Adds space between the two columns */
+		
+padding: 0 20%;
     }
 
     /* Styling the individual list */
@@ -70,16 +73,18 @@ img {
     li {
       margin-bottom: 10px; /* Adds space between the items */
     }
-p{
+/*p{
 text-align:center;
-}
+}*/
 
 .head{
 text-align:center
 }
 
 footer{
-font-height:5px;
+
+font-size: smaller;
+text-align: center;
 }
 
 .conclusion{
@@ -91,10 +96,10 @@ font-size:20px
     font-size: 14px;
 }
 
-.language-toggle a {
+.language-toggle {
     text-decoration: none;
-   /* color: #007BFF; /* A nice blue color */*/
-   color:#FFFFFF;
+   /* color: #007BFF; /* A nice blue color */
+   color:white;
     margin: 0 5px;
     font-weight: bold;
 }
@@ -102,4 +107,25 @@ font-size:20px
 .language-toggle a:hover {
     text-decoration: underline;
     color: #0056b3; /* Darker blue for hover */
+}
+
+
+.center{
+    text-align: center;
+}
+button {
+    font-size: 1.2em; /* Increases the text size */
+    padding: 12px 20px; /* Adds more space inside the button */
+    width: auto; /* Adjusts the button width */
+    height: auto; /* Adjusts the button height */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #4CAF50; /* Optional: button background color */
+    color: white; /* Optional: button text color */
+    border: none; /* Optional: remove border */
+    cursor: pointer; /* Optional: pointer cursor on hover */
+    transition: all 0.3s ease; /* Optional: smooth hover effect */
+}
+
+button:hover {
+    background-color: #45a049; /* Optional: hover effect */
 }

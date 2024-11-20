@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Quiz - Sangamam Birds</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function checkAnswers() {
+            const question1 = document.querySelector('input[name="question1"]:checked');
+            const question2 = document.querySelector('input[name="question2"]:checked');
+            const errorMessage = document.getElementById("error-message");
+             errorMessage.textContent = ""
+            setTimeout(() => {
+            if (!question1 || !question2) {
+                errorMessage.textContent = "Please select an option for both questions.";
+                return false;
+            }
+
+            if (question1.value === "4" && question2.value === "4") {
+                window.location.href = "index.html"; // Redirect to another HTML file
+            } else {
+                errorMessage.textContent = "One or more answers are not correct. Try changing them.";
+            }
+        }, 100);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mini Quiz - Sangamam Birds</h1>
+        <a class="language-toggle" href="quiz-ta.html" lang="ta">தமிழ்</a>
+    </header>
+    <main>
+        <form>
+            <!-- Question 1 -->
+            <h2>Question 1:</h2>
+            <p>How many birds in total can be seen from our flat?</p>
+            <label><input type="radio" name="question1" value="1"> &lt;10</label><br>
+            <label><input type="radio" name="question1" value="2"> 10-15</label><br>
+            <label><input type="radio" name="question1" value="3"> 16-25</label><br>
+            <label><input type="radio" name="question1" value="4"> &gt;25</label><br><br>
+
+            <!-- Question 2 -->
+            <h2>Question 2:</h2>
+            <p>How many birds had built a nest in our flat?</p>
+            <label><input type="radio" name="question2" value="1"> 2</label><br>
+            <label><input type="radio" name="question2" value="2"> 3</label><br>
+            <label><input type="radio" name="question2" value="3"> 4</label><br>
+            <label><input type="radio" name="question2" value="4"> 5</label><br><br>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="checkAnswers()">Open sesame</button>
+        </form>
+
+        <!-- Error Message -->
+        <p id="error-message" style="color: red; font-weight: bold;"></p>
+    </main>
+</body>
+</html>

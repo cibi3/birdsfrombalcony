@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>சங்கமம் பறவைகள் - குறுக்குவினா</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function checkAnswers() {
+            const question1 = document.querySelector('input[name="question1"]:checked');
+            const question2 = document.querySelector('input[name="question2"]:checked');
+            const errorMessage = document.getElementById("error-message");
+            errorMessage.textContent = ""
+            setTimeout(() => {
+            if (!question1 || !question2) {
+                errorMessage.textContent = "தயவுசெய்து இரு கேள்விகளுக்கும் ஒரு விடையை தேர்வு செய்யவும்.";
+                return false;
+            }
+
+            if (question1.value === "4" && question2.value === "4") {
+                window.location.href = "index-ta.html"; // Redirect to Tamil success page
+            } else {
+                errorMessage.textContent = "ஒன்றோ அல்லது அதற்கு மேற்பட்ட பதில்களோ சரியாக இல்லை. அவற்றை மாற்ற முயற்சிக்கவும்.";
+            }
+        }, 100);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>சங்கமம் பறவைகள் - குறுக்குவினா</h1>        
+            <a class="language-toggle" href="quiz-en.html" lang ="en">English</a>
+        
+    </header>
+    <main>
+        <form>
+            <!-- Question 1 -->
+            <h2>கேள்வி 1:</h2>
+            <p>நம் குடியிருப்பிலிருந்து எத்தனை பறவைகளை காண முடியும்?</p>
+            <label><input type="radio" name="question1" value="1"> &lt;10</label><br>
+            <label><input type="radio" name="question1" value="2"> 10-15</label><br>
+            <label><input type="radio" name="question1" value="3"> 16-25</label><br>
+            <label><input type="radio" name="question1" value="4"> &gt;25</label><br><br>
+
+            <!-- Question 2 -->
+            <h2>கேள்வி 2:</h2>
+            <p>நம் குடியிருப்பில் எத்தனை பறவைகள் கூடுகட்டியுள்ளன?</p>
+            <label><input type="radio" name="question2" value="1"> 2</label><br>
+            <label><input type="radio" name="question2" value="2"> 3</label><br>
+            <label><input type="radio" name="question2" value="3"> 4</label><br>
+            <label><input type="radio" name="question2" value="4"> 5</label><br><br>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="checkAnswers()">திறந்திடு சீசே</button>
+        </form>
+
+        <!-- Error Message -->
+        <p id="error-message" style="color: red; font-weight: bold;"></p>
+    </main>
+</body>
+</html>
